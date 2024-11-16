@@ -1,2 +1,0 @@
-# nft-preview-card-componet
- 

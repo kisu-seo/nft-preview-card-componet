@@ -1,0 +1,129 @@
+/***
+ * CSS Reset
+ * A modern CSS reset that removes default browser styles
+ * Version: 1.11.3 (2024-08-25)
+ * Source: https://github.com/elad2412/the-new-css-reset
+ */
+
+/* Base reset - removes all styles except display */
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Typography */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Interactive elements */
+a,
+button {
+  cursor: revert;
+}
+
+/* Lists */
+ol,
+ul,
+menu,
+summary {
+  list-style: none;
+}
+
+ol {
+  counter-reset: revert;
+}
+
+/* Media */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Form elements */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+textarea {
+  white-space: revert;
+}
+
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* Preformatted text */
+:where(pre) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* Placeholders */
+::placeholder {
+  color: unset;
+}
+
+/* Hidden elements */
+:where([hidden]) {
+  display: none;
+}
+
+/* Content editable */
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* Draggable elements */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+/* Modal dialogs */
+:where(dialog:modal) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* Details summary */
+::-webkit-details-marker {
+  display: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: hsl(217, 54%, 11%);
+}
+
+.card {
+  max-width: 327px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+  padding: 24px;
+}
