@@ -112,6 +112,11 @@ meter {
   display: none;
 }
 
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -126,4 +131,117 @@ body {
   background-color: hsl(216, 50%, 16%);
   border-radius: 15px;
   padding: 24px;
+}
+
+.card__image-container {
+  margin-bottom: 24px;
+}
+
+.card img {
+  border-radius: 15px;
+}
+
+.card__title {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.card__description {
+  font-size: 18px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  margin-bottom: 16px;
+}
+
+.card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price,
+.card__time {
+  display: flex;
+  align-items: center;
+}
+
+.card__price span {
+  font-size: 15px;
+  font-weight: 600;
+  color: hsl(178, 100%, 50%);
+  margin-left: 6.48px;
+}
+
+.card__time span {
+  font-size: 15px;
+  font-weight: 600;
+  color: hsl(215, 51%, 70%);
+  margin-left: 6.48px;
+}
+
+.border-line {
+  width: 100%;
+  height: 1px;
+  background-color: hsl(217, 32%, 27%);
+  margin: 24px 0;
+}
+
+.card__creator {
+  display: flex;
+  align-items: center;
+}
+
+.card__creator img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-right: 16px;
+}
+
+.card__creator p {
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+}
+
+.card__creator span {
+  color: white;
+}
+
+@media (min-width: 768px);
+
+.card {
+  max-width: 350px;
+}
+
+.card__image-container {
+  cursor: pointer;
+  position: relative;
+}
+
+.card__image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 302px;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  background-image: url(../images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+  opacity: 0;
+}
+
+.card__image-container:hover::before {
+  opacity: 1;
+}
+.card__title:hover,
+.card__creator span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
 }
